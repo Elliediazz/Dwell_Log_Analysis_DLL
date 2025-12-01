@@ -1,0 +1,12 @@
+timestamp_ms,fraction_id,catheter_id,dwell_index,planned_dwell_s,delivered_dwell_s,dose_rate_Gy_per_s,region_id
+110,F001,1,0,7.0,6.8,0.10,TUMOR
+210,F001,1,1,6.5,6.6,0.10,TUMOR
+305,F001,1,2,6.0,5.7,0.10,TUMOR
+390,F001,2,0,5.0,5.2,0.05,BLADDER
+395,F001,2,0,5.0,5.1,0.05,BLADDER
+520,F001,2,1,4.5,4.2,0.05,BLADDER
+580,F001,3,0,4.0,4.0,0.05,RECTUM
+750,F001,3,1,3.5,3.6,0.05,RECTUM
+810,F001,1,3,5.5,5.3,0.10,TUMOR
+620,F001,2,2,4.0,3.8,0.05,BLADDER
+1010,F001,3,2,3.0,3.1,0.05,RECTUM
