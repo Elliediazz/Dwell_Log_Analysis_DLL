@@ -16,42 +16,49 @@ I then plan to use this data to feed it into a Linear Quadratic Model which will
 
 S=e^(-aD-bD^2)
 
-where:
-S= The Surviving fraction 
-D= The Dose 
-a and b are constants 
+Where:
+    S= The Surviving fraction 
 
-The Linear component (aD) represents the cell death from a single tract of radiation creating a lethal lesion, this damage is directly proportional to the dose. acording to fiveable.me's radiobiology unit 6 study guides, the LQ model is widely used in radiotherapy treatment planning to optimize dose fractionation and predict tumor control probability (TCP) and normal tissue complication probability (NTCP)
+    D= The Dose 
+
+    a and b are constants 
+
+The Linear component (aD) represents the cell death from a single tract of radiation creating a lethal lesion, this damage is directly proportional to the dose. According to Fiveable.me's 'Radiobiology Unit 6 Guide' The Linear Quadratic (LQ) model is widely used in radiotherapy treatment planning to optimize dose fractionation and predict tumor control probability (TCP) and normal tissue complication probability (NTCP)
 
 The Quadratic component (bD^2) represents the cell death from two independent radiation tracts causing seperate lesions when they interact with each other, they create a lethal lesion. This is proportional to the square of the dose.
 
-The Fraction is the models key insight whichis that the Quadratic component is dependent on the time between doses. If there is enough time between fractions (or sessions) a cell can repair a lesion from the first track before a second track can interact witth it, inturn reducing the number of cells killed compare to a single high dose exposure and shows why multiple smaller fractions is ofter perfered and more effcetice as opposed to a sigle high dose
+The Fraction is the models key insight, which is that the Quadratic Component is dependent on the time between doses. If there is enough time between fractions (or sessions) a cell can repair a lesion from the first track before a second track can interact witth it, reducing the number of cells killed compare to a single high dose and shows why multiple smaller fractions is often more effcetice as opposed to a sigle high dose.
 
-Using a Doubly linked list will allows for easier analysis as each node contains two pointers, one pointer references the next node in the sequence, while the other references the previous node. This allows traversal both forward and backward making comparisons like; detecting duplicate events, checking out of order dwell indicies, comparing planned vs "actual" positions, checking time stamp differences and verifying catheter position consitency things that can can be easily implemented with a DLL. A DLL also makes merge sorting easier as it can split the list in half intuitively. 
+## Implementation
+Using a Doubly linked list (DLL) allows for easier analysis as each node as it contains two pointers, one pointer references the next node in the sequence, while the other references the previous node. This allows traversal both forward and backward making comparisons like; detecting duplicate events, checking out of order dwell indicies, checking time stamp differences and verifying catheter position consitency, things that can can be easily implemented with a DLL. A DLL also makes merge sorting easier as it can split the list in half intuitively. 
 
 ## Time/Space Comlexity
 When it comes to a doubly linked list, the time complexity remains 0(n) for searching and taversal as you would need to potentially traverse through the entire list to find a value. 
 Merge sort however, has a complexity of 0(n log n)
 
 ## Advantages
-A doubly linked list works really well for this project because it lets me easily move forward and backward through the dwell log. That’s especially helpful when I need to compare two events, check neighboring dwell indices, or detect out-of-order entries. It also pairs naturally with merge sort, since merge sort works efficiently with linked lists by just relinking pointers instead of shifting data around.
+A doubly linked list works really well for this project because it lets me easily move forward and backward through the dwell log. That’s especially helpful when I need to compare two events, check neighboring dwell indices, or detect out-of-order entries. It also works naturally with merge sort making the implementations more straightforward.
 
 ## Disadvantages
 One of the downfalls of using a DLL is the extra memory that is needed to store both the next and prev pointers in addition to the actual data.
 A disadvantage for using Merge Sort vs another sorting algorith is that it is more complex to implement compared to simpler algorithms, and it always runs in O(n log n) even if it is mostly sorted.
 
 ## My Goal:
-1. Create two mock dwell log datasets for a "patient" in CSV format: one representing the predicted dwell log and one representing the "actual" dwell log "after treatment".
+1. Create two mock dwell log datasets in CSV format for a hypothetical patient where one is a predicted dwell log generated from the treatment plan, and one is the 'actual' dwell log representing what was delivered during treatment.
 
-2. Build a front end that can load the predicted dwell log and apply a Linear–Quadratic (LQ) model to estimate how many cells survive after a given radiation dose and how effective that dose is biologically. 
+These files serve as the primary input for testing the program.
 
-3. Allow the user to adjust the radiation dose in the front end and recompute the LQ model results. (This is FAR more complex but for the purpose of this assigmnet I will have this be a single digit that can be adjusted for comparison)
+2. Build a console-based frontend that allows the user to load either the predicted or actual dwell log and choose which analysis or processing methods to run.
+    - The Frontend will allow the user to sort, analyze, and evaluate the dwell log data.
 
-4. Store each dose scenario and its LQ result in a list, then use merge sort to rank the scenarios based on effectiveness (for example, lowest surviving fraction = most effective dose).
+3. Perform computational analysis using a Linear–Quadratic (LQ) model to estimate cell surviving fraction and evaluate the biological effectiveness of the delivered dose.
 
-5. Once the patient has “gone through” treatment, the researcher can upload the actual dwell log. The program will then build a doubly linked list of the delivered dwell events and use merge sort to analyze dwell time discrepancies, dwell time per catheter, out of order dwell indices, and duplicate events to help evaluate the quality of the treatment delivery. 
+4. Once the patient has “gone through” treatment, the user can load the actual dwell log for comparison.
+The program will construct a doubly linked list of dwell events and apply merge sort to; detect dwell time discrepancies, evaluate dwell time per catheter, identify out-of-order dwell indices, detect duplicate or irregular events
 
-6. The front end will display the data in list form and also plot the results on simple graphs so the researcher can visually compare planned vs actual delivery and the impact on predicted cell survival.
+This provides insight into how accurately the treatment was delivered compared to the plan.
+
+5. The frontend will then generate a summarized report of the results so the user can visually compare planned vs. delivered dwell logs and understand how these differences impact predicted cell survival based on the LQ model.
 
 ## Doubly Linked List Invariants:
 1. The 'next' pointer of the tail node must be NULL.
