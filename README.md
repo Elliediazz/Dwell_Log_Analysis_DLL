@@ -49,13 +49,13 @@ A disadvantage for using Merge Sort vs another sorting algorith is that it is mo
 
     - These files serve as the primary input for testing the program.
 
-2. Build a console-based frontend that allows the user to load either the predicted or actual dwell log and choose which analysis or processing methods to run.
+2. Build a console-based frontend that allows the user to upload either the predicted or actual dwell log and choose which analysis or processing methods to run.
     - The Frontend will allow the user to sort, analyze, and evaluate the dwell log data.
 
-3. Perform computational analysis using a Linear–Quadratic (LQ) model to estimate cell surviving fraction and evaluate the biological effectiveness of the delivered dose.
+3. Once the user has upload the dwell log, the program will create a doubly linked list of the dwell events to organize the data 
 
-4. Once the patient has “gone through” treatment, the user can load the actual dwell log for comparison.
-The program will construct a doubly linked list of dwell events and apply merge sort to; detect dwell time discrepancies, evaluate dwell time per catheter, identify out-of-order dwell indices, detect duplicate or irregular events
+
+4. After the data is organized in a DLL the program will perform computational analysis using a Linear–Quadratic (LQ) model to estimate cell surviving fraction and evaluate the biological effectiveness of the delivered dose. It will also be able to apply merge sort to; detect dwell time discrepancies, evaluate dwell time per catheter, identify out-of-order dwell indices, detect duplicate or irregular events
 
     - This provides insight into how accurately the treatment was delivered compared to the plan.
 
