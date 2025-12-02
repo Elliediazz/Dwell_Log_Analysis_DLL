@@ -43,6 +43,11 @@ Using a Doubly linked list will allows for easier analysis as each node contains
 
 6. The front end will display the data in list form and also plot the results on simple graphs so the researcher can visually compare planned vs actual delivery and the impact on predicted cell survival.
 
+## Doubly Linked List Invariants:
+1. The 'next' pointer of the tail node must be NULL.
+2. The 'prev' pointer of the head node must be NULL.
+3. If the list is empty, both head and tail must be NULL.
+4. If the list contains exactly one node, that node's 'prev' and 'next' must both be NULL.
 
 
 ### Sources: 
