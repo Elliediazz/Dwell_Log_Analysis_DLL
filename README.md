@@ -29,6 +29,16 @@ The Fraction is the models key insight whichis that the Quadratic component is d
 
 Using a Doubly linked list will allows for easier analysis as each node contains two pointers, one pointer references the next node in the sequence, while the other references the previous node. This allows traversal both forward and backward making comparisons like; detecting duplicate events, checking out of order dwell indicies, comparing planned vs "actual" positions, checking time stamp differences and verifying catheter position consitency things that can can be easily implemented with a DLL. A DLL also makes merge sorting easier as it can split the list in half intuitively. 
 
+## Time/Space Comlexity
+When it comes to a doubly linked list, the time complexity remains 0(n) for searching and taversal as you would need to potentially traverse through the entire list to find a value. 
+Merge sort however, has a complexity of 0(n log n)
+
+## Advantages
+A doubly linked list works really well for this project because it lets me easily move forward and backward through the dwell log. That’s especially helpful when I need to compare two events, check neighboring dwell indices, or detect out-of-order entries. It also pairs naturally with merge sort, since merge sort works efficiently with linked lists by just relinking pointers instead of shifting data around.
+
+## Disadvantages
+One of the downfalls of using a DLL is the extra memory that is needed to store both the next and prev pointers in addition to the actual data.
+A disadvantage for using Merge Sort vs another sorting algorith is that it is more complex to implement compared to simpler algorithms, and it always runs in O(n log n) even if it is mostly sorted.
 
 ## My Goal:
 1. Create two mock dwell log datasets for a "patient" in CSV format: one representing the predicted dwell log and one representing the "actual" dwell log "after treatment".
