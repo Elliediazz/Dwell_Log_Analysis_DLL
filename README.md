@@ -47,7 +47,7 @@ A disadvantage for using Merge Sort vs another sorting algorith is that it is mo
 ## My Goal:
 1. Create two mock dwell log datasets in CSV format for a hypothetical patient where one is a predicted dwell log generated from the treatment plan, and one is the 'actual' dwell log representing what was delivered during treatment.
 
-These files serve as the primary input for testing the program.
+    - These files serve as the primary input for testing the program.
 
 2. Build a console-based frontend that allows the user to load either the predicted or actual dwell log and choose which analysis or processing methods to run.
     - The Frontend will allow the user to sort, analyze, and evaluate the dwell log data.
@@ -57,7 +57,7 @@ These files serve as the primary input for testing the program.
 4. Once the patient has “gone through” treatment, the user can load the actual dwell log for comparison.
 The program will construct a doubly linked list of dwell events and apply merge sort to; detect dwell time discrepancies, evaluate dwell time per catheter, identify out-of-order dwell indices, detect duplicate or irregular events
 
-This provides insight into how accurately the treatment was delivered compared to the plan.
+    - This provides insight into how accurately the treatment was delivered compared to the plan.
 
 5. The frontend will then generate a summarized report of the results so the user can visually compare planned vs. delivered dwell logs and understand how these differences impact predicted cell survival based on the LQ model.
 
