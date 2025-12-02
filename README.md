@@ -59,8 +59,24 @@ A disadvantage for using Merge Sort vs another sorting algorith is that it is mo
 3. If the list is empty, both head and tail must be NULL.
 4. If the list contains exactly one node, that node's 'prev' and 'next' must both be NULL.
 
+## File Structure
+### helpers: 
+This folder holds the loading logic used to read both the predicted dwell log and the actual dwell log from CSV files. Its job is to take raw files and convert them into data structures the rest of the program can use.
 
-### Sources: 
+### include: 
+This folder contains the mock data and any header files that need to be shared between components.
+
+### src: 
+The source folder hold the actual logic implementation. The DwellLogData files implement the doubly linked list data structure and related operations for storing dwell log events. While the Analysis files implement the Linear–Quadratic (LQ) model logic and any additional analysis functions like the dose calculations, discrepancy checks, etc.
+
+### tests: 
+This folder holds the unit tests for the data structure, CSV loading, and analysis logic. It’s used to verify that the implementation behaves as expected and handles edge cases correctly.
+
+### main.cpp: 
+The main file acts as the “frontend” of the application. It provides the console-based user interface, lets the user choose input files, triggers the analysis, and displays results based on the logic implemented in the src files.
+
+
+## Sources: 
 https://iopscience.iop.org/article/10.1088/1361-6560/aaf26a/pdf 
 https://www.youtube.com/watch?v=9KDrRaXVuK0 
 https://aapm.onlinelibrary.wiley.com/doi/epdf/10.1002/mp.17062 

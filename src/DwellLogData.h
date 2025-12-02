@@ -64,8 +64,7 @@ public:
   //mode 2: Sort by Catheter and Index
   void mergesort(DwellNode* start, int mode);
 
-// merge is the helper function for mergesort. It returns a vector
-// containing the merged contents of the two input vectors.
+// merge is the helper function for mergesort.
   void merge(DwellNode* a, DwellNode* b, int mode);
 
 private:
@@ -74,4 +73,4 @@ private:
   int size_;
 };
 
-#endif // DWELLLOG_H__
+#endif

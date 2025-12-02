@@ -1,4 +1,7 @@
 #include "DwellLogData.h"
+#include <iostream>
+
+using namespace std;
 
 // constructor, initialize class variables and pointers here if need.
 DwellLog::DwellLog() {
@@ -44,7 +47,7 @@ DwellNode* DwellLog::init_node(
 }
 
 void DwellLog::append(DwellNode* new_node) {
-  if (head == NULL){
+  if (head_ == NULL){
     head_ = new_node;
     tail_ = new_node;
   }else {
@@ -54,8 +57,6 @@ void DwellLog::append(DwellNode* new_node) {
   }
   size_ ++;
 }
-
-
 
 void DwellLog::clear() {
   DwellNode* cursor = head_;
@@ -69,9 +70,8 @@ void DwellLog::clear() {
   size_ = 0;
 }
 
-//Redo for Dwell log implementation
+//TODO: Redo for Dwell log implementation
 string DwellLog::contains(string fraction) {
-  // Your code here
   //This will hold code so that the user can input a fraction as a parameter of the contains method and it will return a list of the values in that fraction
 }
 
@@ -83,5 +83,5 @@ DwellNode* DwellLog::tail() const {
     return tail_;
 }
 
-//Todo: Sorting 
-//Implement mergesort and merge methods
+//TODO: Mergesort Method
+//TODO: Merge Method
