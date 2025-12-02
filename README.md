@@ -17,6 +17,7 @@ I then plan to use this data to feed it into a Linear Quadratic Model which will
 S=e^(-aD-bD^2)
 
 Where:
+
     S= The Surviving fraction 
 
     D= The Dose 
