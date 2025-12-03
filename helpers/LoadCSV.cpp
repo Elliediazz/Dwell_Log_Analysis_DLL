@@ -5,10 +5,12 @@
 
 using namespace std;
 
-bool load_dwell_log_data(const string& filename, DwellLog& log) {
-// Load/parse CSV FILES
+bool load_dwell_log_data(const string& filename, DwellLog& log) 
+{
+    // Load/parse CSV FILES
     ifstream file(filename);
-    if (!file.is_open()){
+    if (!file.is_open())
+    {
         cout << "Error opening: "<< filename << endl;
         return false;
     }
@@ -18,7 +20,8 @@ bool load_dwell_log_data(const string& filename, DwellLog& log) {
     //REMEBER: skip the header line!!!
     getline(file, line);
 
-    while(getline(file, line)) {
+    while(getline(file, line)) 
+    {
         stringstream ss(line);
         string temp;
         DwellRow row;
@@ -43,7 +46,8 @@ bool load_dwell_log_data(const string& filename, DwellLog& log) {
         if (!getline(ss, temp, ',')) continue;
         row.dose_rate_Gy_per_s = stod(temp);
 
-        if (!getline(ss, row.region_id, ',')) {
+        if (!getline(ss, row.region_id, ',')) 
+        {
             row.region_id = "";
         }
 

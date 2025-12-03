@@ -14,14 +14,17 @@ DwellLog::DwellLog() {
 // deconstructor,
 DwellLog::~DwellLog() { clear(); }
 
-int DwellLog::size() const {
+int DwellLog::size() const 
+{
   return size_;
 }
 
-void DwellLog::print_table() const {
+void DwellLog::print_table() const 
+{
   DwellNode* cursor = head_;
 
-  if (cursor == NULL){
+  if (cursor == NULL)
+  {
     cout << "No records availibl\n";
   }
 
@@ -39,7 +42,8 @@ void DwellLog::print_table() const {
 
   cout << string(100, '-') <<"\n";
 
-  while (cursor != NULL) {
+  while (cursor != NULL) 
+  {
     cout << left
     
     << setw(12) << cursor->time_ms
@@ -56,7 +60,8 @@ void DwellLog::print_table() const {
   }
 }
 
-DwellNode* DwellLog::init_node(const DwellRow& row) {
+DwellNode* DwellLog::init_node(const DwellRow& row) 
+{
   DwellNode* x = new DwellNode;
   x->time_ms = row.time_ms;
   x->fraction_id = row.fraction_id;
@@ -71,12 +76,14 @@ DwellNode* DwellLog::init_node(const DwellRow& row) {
   return x;
 }
 
-void DwellLog::append_data(const DwellRow& row) {
+void DwellLog::append_data(const DwellRow& row) 
+{
   DwellNode* new_node = init_node(row);
   append(new_node);
 }
 
-void DwellLog::append(DwellNode* new_node) {
+void DwellLog::append(DwellNode* new_node) 
+{
   if (head_ == NULL){
     head_ = new_node;
     tail_ = new_node;
@@ -94,27 +101,32 @@ void DwellLog::append(DwellNode* new_node) {
 }
 
 // TODO: InsertData inserts a new node that contains the given data value - Inserting at the end of the list should have the same effect as appending.
-void DwellLog::insert_data(int index, const DwellRow& row){
+void DwellLog::insert_data(int index, const DwellRow& row)
+{
   return;
 }
 
 // TODO: This is the same as insert_data, except we're inserting a node, rather than a value. This closely mirrors Append and AppendData.
-void DwellLog::insert(int index, DwellNode* new_node){
+void DwellLog::insert(int index, DwellNode* new_node)
+{
   return;
 }
 
 // TODO: Removes the node indicated by the given index and frees its memory.
-void DwellLog::remove(int index){
+void DwellLog::remove(int index)
+{
   return;
 }
 
 // TODO: Returns the data associated with a fraction number, false otherwise.
-string DwellLog::contains(string fraction) {
+string DwellLog::contains(string fraction) 
+{
   //This will hold code so that the user can input a fraction as a parameter of the contains method and it will return a list of the values in that fraction
   return "";
 }
 
-void DwellLog::clear() {
+void DwellLog::clear() 
+{
   DwellNode* cursor = head_;
   while (cursor != NULL){
     DwellNode* next = cursor -> next;
@@ -126,10 +138,12 @@ void DwellLog::clear() {
   size_ = 0;
 }
 
-DwellNode* DwellLog::head() const {
+DwellNode* DwellLog::head() const 
+{
     return head_;
 }
 
-DwellNode* DwellLog::tail() const {
+DwellNode* DwellLog::tail() const 
+{
     return tail_;
 }

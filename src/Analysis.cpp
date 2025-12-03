@@ -4,11 +4,13 @@
 
 using namespace std;
 
-Analysis::Analysis() {
+Analysis::Analysis() 
+{
     //TODO
 }
 
-Analysis::~Analysis() {
+Analysis::~Analysis() 
+{
     //TODO: clear();
 }
 

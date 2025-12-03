@@ -90,7 +90,7 @@ The main file acts as the “frontend” of the application. It provides the con
 4. ./dwell_log_app
 5. ../include/predicted_dwell_log.csv
     You should get a message stating the number of records that were loaded
-6. 
+6. This wil display the menu options
 
 
 
