@@ -19,3 +19,7 @@ Analysis::~Analysis() {
 //TODO: Compare predicted vs Actual
 
 //TODO: Print analysis (Add Graph is time allows)
+
+//TODO: Mergesort Method
+
+//TODO: Merge Method

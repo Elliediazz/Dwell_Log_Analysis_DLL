@@ -19,6 +19,18 @@ public:
 
     //TODO: Print analysis (Add Graph is time allows)
 
+    //TODO: APPLY MERGESORT
+    void sortByTime();
+    void sortByCatheterAndIndex();
+
+    //Merge Sort
+    //mode 1: Sort by Time
+    //mode 2: Sort by Catheter and Index
+    void mergesort(DwellNode* start, int mode);
+
+    // merge is the helper function for mergesort.
+    void merge(DwellNode* a, DwellNode* b, int mode);
+
 };
 
 #endif

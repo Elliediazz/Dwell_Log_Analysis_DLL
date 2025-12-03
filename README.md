@@ -83,8 +83,21 @@ This folder holds the unit tests for the data structure, CSV loading, and analys
 ### main.cpp: 
 The main file acts as the “frontend” of the application. It provides the console-based user interface, lets the user choose input files, triggers the analysis, and displays results based on the logic implemented in the src files.
 
+## How to run the app locally
+1. cd build
+2. cmake .. 
+3. make
+4. ./dwell_log_app
+5. ../include/predicted_dwell_log.csv
+    You should get a message stating the number of records that were loaded
+6. 
+
+
 
 ## Sources: 
+
 https://iopscience.iop.org/article/10.1088/1361-6560/aaf26a/pdf 
+
 https://www.youtube.com/watch?v=9KDrRaXVuK0 
+
 https://aapm.onlinelibrary.wiley.com/doi/epdf/10.1002/mp.17062 
