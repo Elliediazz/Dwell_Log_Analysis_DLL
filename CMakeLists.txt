@@ -21,3 +21,10 @@ set(SOURCES
 
 # Create executable
 add_executable(dwell_log_app ${SOURCES})
+
+# Test executable (runs your assert-based tests)
+add_executable(dwell_tests
+    tests/test_logdata.cpp
+    src/DwellLogData.cpp
+    helpers/LoadCSV.cpp
+)

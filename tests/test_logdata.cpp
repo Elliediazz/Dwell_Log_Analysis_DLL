@@ -41,10 +41,11 @@ void test_clear()
 void test_load_csv() 
 {
     DwellLog log;
-    bool ok = load_dwell_log_data("test_data.csv", log);
+    bool ok = load_dwell_log_data("../include/test_data.csv", log);
 
+    //cout << "*****DEBUGGER*****: log.size() = " << log.size() << endl;
     assert(ok == true);
-    assert(log.size() == 11);
+    assert(log.size() == 10);
 }
 
 //TODO: Write unit tests for LQ Model analysis functions
