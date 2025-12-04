@@ -129,26 +129,12 @@ dwell_log_app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_log_app.dir/build.make CMakeFiles/dwell_log_app.dir/build
 .PHONY : dwell_log_app/fast
 
-#=============================================================================
-# Target rules for targets named dwell_tests
-
-# Build rule for target.
-dwell_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dwell_tests
-.PHONY : dwell_tests
-
-# fast build rule for target.
-dwell_tests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/build
-.PHONY : dwell_tests/fast
-
 helpers/LoadCSV.o: helpers/LoadCSV.cpp.o
 .PHONY : helpers/LoadCSV.o
 
 # target to build an object file
 helpers/LoadCSV.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_log_app.dir/build.make CMakeFiles/dwell_log_app.dir/helpers/LoadCSV.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/helpers/LoadCSV.cpp.o
 .PHONY : helpers/LoadCSV.cpp.o
 
 helpers/LoadCSV.i: helpers/LoadCSV.cpp.i
@@ -157,7 +143,6 @@ helpers/LoadCSV.i: helpers/LoadCSV.cpp.i
 # target to preprocess a source file
 helpers/LoadCSV.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_log_app.dir/build.make CMakeFiles/dwell_log_app.dir/helpers/LoadCSV.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/helpers/LoadCSV.cpp.i
 .PHONY : helpers/LoadCSV.cpp.i
 
 helpers/LoadCSV.s: helpers/LoadCSV.cpp.s
@@ -166,7 +151,6 @@ helpers/LoadCSV.s: helpers/LoadCSV.cpp.s
 # target to generate assembly for a file
 helpers/LoadCSV.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_log_app.dir/build.make CMakeFiles/dwell_log_app.dir/helpers/LoadCSV.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/helpers/LoadCSV.cpp.s
 .PHONY : helpers/LoadCSV.cpp.s
 
 main.o: main.cpp.o
@@ -223,7 +207,6 @@ src/DwellLogData.o: src/DwellLogData.cpp.o
 # target to build an object file
 src/DwellLogData.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_log_app.dir/build.make CMakeFiles/dwell_log_app.dir/src/DwellLogData.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/src/DwellLogData.cpp.o
 .PHONY : src/DwellLogData.cpp.o
 
 src/DwellLogData.i: src/DwellLogData.cpp.i
@@ -232,7 +215,6 @@ src/DwellLogData.i: src/DwellLogData.cpp.i
 # target to preprocess a source file
 src/DwellLogData.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_log_app.dir/build.make CMakeFiles/dwell_log_app.dir/src/DwellLogData.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/src/DwellLogData.cpp.i
 .PHONY : src/DwellLogData.cpp.i
 
 src/DwellLogData.s: src/DwellLogData.cpp.s
@@ -241,32 +223,7 @@ src/DwellLogData.s: src/DwellLogData.cpp.s
 # target to generate assembly for a file
 src/DwellLogData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_log_app.dir/build.make CMakeFiles/dwell_log_app.dir/src/DwellLogData.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/src/DwellLogData.cpp.s
 .PHONY : src/DwellLogData.cpp.s
-
-tests/test_logdata.o: tests/test_logdata.cpp.o
-.PHONY : tests/test_logdata.o
-
-# target to build an object file
-tests/test_logdata.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/tests/test_logdata.cpp.o
-.PHONY : tests/test_logdata.cpp.o
-
-tests/test_logdata.i: tests/test_logdata.cpp.i
-.PHONY : tests/test_logdata.i
-
-# target to preprocess a source file
-tests/test_logdata.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/tests/test_logdata.cpp.i
-.PHONY : tests/test_logdata.cpp.i
-
-tests/test_logdata.s: tests/test_logdata.cpp.s
-.PHONY : tests/test_logdata.s
-
-# target to generate assembly for a file
-tests/test_logdata.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwell_tests.dir/build.make CMakeFiles/dwell_tests.dir/tests/test_logdata.cpp.s
-.PHONY : tests/test_logdata.cpp.s
 
 # Help Target
 help:
@@ -277,7 +234,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... dwell_log_app"
-	@echo "... dwell_tests"
 	@echo "... helpers/LoadCSV.o"
 	@echo "... helpers/LoadCSV.i"
 	@echo "... helpers/LoadCSV.s"
@@ -290,9 +246,6 @@ help:
 	@echo "... src/DwellLogData.o"
 	@echo "... src/DwellLogData.i"
 	@echo "... src/DwellLogData.s"
-	@echo "... tests/test_logdata.o"
-	@echo "... tests/test_logdata.i"
-	@echo "... tests/test_logdata.s"
 .PHONY : help
 
 

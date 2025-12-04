@@ -374,7 +374,8 @@ CMakeFiles/dwell_log_app.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/iostream \
   ../helpers/LoadCSV.h \
   ../src/DwellLogData.h \
-  ../src/Analysis.h
+  ../src/Analysis.h \
+  ../src/DwellLogData.h
 
 CMakeFiles/dwell_log_app.dir/src/Analysis.cpp.o: ../src/Analysis.cpp \
   /usr/include/stdc-predef.h \

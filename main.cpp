@@ -2,7 +2,7 @@
 #include <sstream>
 #include <iostream>
 
-#include "./helpers/LoadCSV.h"
+#include "LoadCSV.h"
 #include "DwellLogData.h"
 #include "Analysis.h"
 
@@ -28,7 +28,7 @@ int main ()
     cout << "Successfully loaded dwell predicted log from '" << input_file << "'\n";
     cout << "Loaded events: " << log.size() << "\n";
 
-    //Analysis analysis; 
+    Analysis analysis; 
 
     while (true) 
     {
@@ -36,7 +36,7 @@ int main ()
         cout << "1) Load a different CSV file\n";
         cout << "2) Print current dwell log\n";
         cout << "3) Clear dwell log data\n";
-        cout << "4)TODO: Apply Merge Sort\n";
+        cout << "4) Apply Merge Sort\n";
         cout << "5)TODO: Apply LQ Model\n";
         cout << "6)TODO: Compare predicted vs actual logs\n";
         cout << "Q) Quit\n";
@@ -91,7 +91,32 @@ int main ()
         }
         else if(choice == 4) 
         {
-            cout << "TODO: Apply Merge Sort on dwell log - dwell time.\n";
+            if (log.size() == 0) {
+                cout << "Dwell log is empty. Please load a CSV file.\n";
+                continue;
+            }
+
+            cout << "Select sort mode:\n";
+            cout << "  1) Sort by time\n";
+            cout << "  2) Sort by catheter_id + dwell_index\n";
+            cout << "Enter choice: ";
+
+            int sort_choice;
+            cin >> sort_choice;
+
+            if (sort_choice == 1) {
+                cout << "Sorting by time\n";
+                analysis.sort_by_time(log);
+                cout << "Done. Sorted dwell log:\n";
+                log.print_table();
+            } else if (sort_choice == 2) {
+                cout << "Sorting by catheter_id + dwell_index\n";
+                analysis.sort_by_catheter_index(log);
+                cout << "Done. Sorted dwell log:\n";
+                log.print_table();
+            } else {
+                cout << "Invalid sort choice, please choose mode 1 or mode 2.\n";
+            }
         }
         else if(choice == 5) 
         {

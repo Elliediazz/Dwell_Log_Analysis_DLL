@@ -1,6 +1,6 @@
-#ifndef ANALYSIS_H__
-#define ANALYSIS_H__
- 
+#ifndef LOADCSV_H__
+#define LOADCSV_H__
+
 #include <string>
 #include "DwellLogData.h"
 

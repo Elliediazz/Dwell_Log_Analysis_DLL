@@ -140,10 +140,27 @@ void DwellLog::clear()
 
 DwellNode* DwellLog::head() const 
 {
-    return head_;
+  return head_;
 }
 
 DwellNode* DwellLog::tail() const 
 {
-    return tail_;
+  return tail_;
+}
+
+void DwellLog::rebuild_from_head(DwellNode* new_head){
+  head_= new_head;
+  tail_= NULL;
+  size_= 0;
+
+  DwellNode* prev = NULL;
+  DwellNode* curr = head_;
+
+  while (curr != NULL){
+    curr->prev = prev;
+    tail_ = curr;
+    prev = curr;
+    curr = curr->next;
+    size_++;
+  }
 }

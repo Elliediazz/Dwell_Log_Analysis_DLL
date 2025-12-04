@@ -148,6 +148,7 @@ CMakeFiles/dwell_log_app.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/jovyan/Final\ Project/./helpers/LoadCSV.h \
+ /home/jovyan/Final\ Project/helpers/LoadCSV.h \
  /home/jovyan/Final\ Project/src/DwellLogData.h \
- /home/jovyan/Final\ Project/src/Analysis.h
+ /home/jovyan/Final\ Project/src/Analysis.h \
+ /home/jovyan/Final\ Project/src/DwellLogData.h
