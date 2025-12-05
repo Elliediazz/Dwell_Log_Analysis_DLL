@@ -49,7 +49,6 @@ void test_load_csv()
 }
 
 //TODO: Write unit tests for LQ Model analysis functions
-    //TBD on specifics: ****NOTE AS FUNCTIONS ARE WRITTEN****
 
 int main() {
     cout << "Running tests\n";

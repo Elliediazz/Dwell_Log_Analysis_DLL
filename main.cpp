@@ -87,7 +87,7 @@ int main ()
             cout << "Current predicted Dwell Log Data - Loaded events:" << predicted_log.size() << "\n";
             predicted_log.print_table();
         }
-        else if(choice == 3) 
+        else if(choice == 3)
         {
             predicted_log.clear();
             cout << "predicted dwell log data has been cleared. Loaded events:" << predicted_log.size() << "\n";

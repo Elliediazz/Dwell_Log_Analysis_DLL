@@ -104,6 +104,8 @@ The main file acts as the “frontend” of the application. It provides the con
      If you select 5: You will be prompted with "No actual dwell log loaded, Please enter CSV file for actual dwell log:" enter the following: ../include/actual_dwell_log.csv
 7. You will be prompted to enter output file names in steps 5 and 6 if you choose. If not there are example files in the build folder displaying example outputs. They are labeled: comparison_report.txt and lq_summary.txt
 
+## Final Project Video
+https://drive.google.com/file/d/1WywuR6JpSgc9jg3xr4KtMV86tJBl_Kwe/view?usp=sharing
 
 
 ## Sources: 
