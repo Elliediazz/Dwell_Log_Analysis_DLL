@@ -84,15 +84,25 @@ This folder holds the unit tests for the data structure, CSV loading, and analys
 The main file acts as the “frontend” of the application. It provides the console-based user interface, lets the user choose input files, triggers the analysis, and displays results based on the logic implemented in the src files.
 
 ## How to run the app locally
-1. cd build
-2. cmake .. 
-3. make
-4. to run the app: ./dwell_log_app
+1. Go to build directory by using: cd build/
+2. Clear existing files and subdirs in build dir by rm -r *
+3. Run cmake ..
+4. Run make
+4. To run the app: ./dwell_log_app
 5. When prompted "Please enter CSV file for the predicted dwell log" enter the following: ../include/predicted_dwell_log.csv
     You should get a message stating the number of records that were loaded
-
-    When prompted "No actual dwell log loaded, Please enter CSV file for actual dwell log:" enter the following: ../include/actual_dwell_log.csv
 6. This wil display the menu options
+    MAIN MENU
+    1) Load a different CSV f
+    2) Print current predicted dwell 
+    3) Clear dwell log d
+    4) Apply Merge S
+    5) Apply LQ Model
+    6) Compare predicted vs actual log
+    Q) Q to quit
+
+     If you select 5: You will be prompted with "No actual dwell log loaded, Please enter CSV file for actual dwell log:" enter the following: ../include/actual_dwell_log.csv
+7. You will be prompted to enter output file names in steps 5 and 6 if you choose. If not there are example files in the build folder displaying example outputs. They are labeled: comparison_report.txt and lq_summary.txt
 
 
 
