@@ -35,7 +35,7 @@ Using a Doubly linked list (DLL) allows for easier analysis as each node as it c
 
 ## Time/Space Comlexity
 When it comes to a doubly linked list, the time complexity remains 0(n) for searching and taversal as you would need to potentially traverse through the entire list to find a value. 
-Merge sort however, has a complexity of 0(n log n)
+Merge sort however, has a complexity of 0(n log 2n), where N is the size of the linked list.
 
 ## Advantages
 A doubly linked list works really well for this project because it lets me easily move forward and backward through the dwell log. That’s especially helpful when I need to compare two events, check neighboring dwell indices, or detect out-of-order entries. It also works naturally with merge sort making the implementations more straightforward.
@@ -87,9 +87,11 @@ The main file acts as the “frontend” of the application. It provides the con
 1. cd build
 2. cmake .. 
 3. make
-4. ./dwell_log_app
-5. ../include/predicted_dwell_log.csv
+4. to run the app: ./dwell_log_app
+5. When prompted "Please enter CSV file for the predicted dwell log" enter the following: ../include/predicted_dwell_log.csv
     You should get a message stating the number of records that were loaded
+
+    When prompted "No actual dwell log loaded, Please enter CSV file for actual dwell log:" enter the following: ../include/actual_dwell_log.csv
 6. This wil display the menu options
 
 

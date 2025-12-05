@@ -4,6 +4,7 @@
 #include "DwellLogData.h"
 #include <string>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -19,7 +20,7 @@ public:
     void apply_lq_to_log(const DwellLog& log, double a, double b);
     
     //Compare predicted vs Actual
-    void compare_predicted_actual(const DwellLog& predicted, const DwellLog& actual);
+    void compare_predicted_actual(const DwellLog& predicted, const DwellLog& actual, ostream& os = cout);
 
     //Print analysis to a seperate file (Add Graph is time allows)
     void print_analysis(ostream& os = cout);
@@ -35,6 +36,16 @@ public:
 
     // merge is the helper function for mergesort.
     DwellNode* merge(DwellNode* a, DwellNode* b, int mode);
+
+private:
+    struct LQSummary {
+        string fraction_id;
+        int catheter;
+        int dwell_index;
+        double dose;
+        double survival;
+    };
+    vector<LQSummary> summarys_;
 };
 
 #endif

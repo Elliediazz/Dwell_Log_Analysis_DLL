@@ -1,0 +1,12 @@
+LQ MODEL SUMMARY 
+Fraction F001, Catheter 1, Index 0 : Dose = 0.7 Gy, Survival = 0.827207
+Fraction F001, Catheter 1, Index 1 : Dose = 0.65 Gy, Survival = 0.83931
+Fraction F001, Catheter 1, Index 2 : Dose = 0.6 Gy, Survival = 0.851462
+Fraction F001, Catheter 2, Index 0 : Dose = 0.25 Gy, Survival = 0.937653
+Fraction F001, Catheter 2, Index 1 : Dose = 0.225 Gy, Survival = 0.943868
+Fraction F001, Catheter 3, Index 0 : Dose = 0.2 Gy, Survival = 0.950089
+Fraction F001, Catheter 3, Index 1 : Dose = 0.175 Gy, Survival = 0.956314
+Fraction F001, Catheter 1, Index 3 : Dose = 0.55 Gy, Survival = 0.863661
+Fraction F001, Catheter 2, Index 2 : Dose = 0.2 Gy, Survival = 0.950089
+Fraction F001, Catheter 3, Index 2 : Dose = 0.15 Gy, Survival = 0.962544
+
