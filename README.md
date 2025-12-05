@@ -84,7 +84,7 @@ This folder holds the unit tests for the data structure, CSV loading, and analys
 The main file acts as the “frontend” of the application. It provides the console-based user interface, lets the user choose input files, triggers the analysis, and displays results based on the logic implemented in the src files.
 
 ## How to run the app locally
-1. Go to build directory by using: cd build/
+1. Go to build directory by using: cd build
 2. Clear existing files and subdirs in build dir by rm -r *
 3. Run cmake ..
 4. Run make
