@@ -113,3 +113,7 @@ https://iopscience.iop.org/article/10.1088/1361-6560/aaf26a/pdf
 https://www.youtube.com/watch?v=9KDrRaXVuK0 
 
 https://aapm.onlinelibrary.wiley.com/doi/epdf/10.1002/mp.17062 
+
+https://interviewkickstart.com/blogs/learn/merge-sort-for-linked-list 
+
+https://www.sarthaks.com/3596791/how-does-merge-sort-work-on-a-doubly-linked-list
