@@ -93,13 +93,13 @@ The main file acts as the “frontend” of the application. It provides the con
     You should get a message stating the number of records that were loaded
 6. This wil display the menu options
     MAIN MENU
-    1) Load a different CSV f
-    2) Print current predicted dwell 
-    3) Clear dwell log d
-    4) Apply Merge S
+    1) Load a different CSV file
+    2) Print current predicted dwell log
+    3) Clear dwell log data
+    4) Apply Merge Sort
     5) Apply LQ Model
-    6) Compare predicted vs actual log
-    Q) Q to quit
+    6) Compare predicted vs actual logs
+    Q) Quit
 
      If you select 5: You will be prompted with "No actual dwell log loaded, Please enter CSV file for actual dwell log:" enter the following: ../include/actual_dwell_log.csv
 7. You will be prompted to enter output file names in steps 5 and 6 if you choose. If not there are example files in the build folder displaying example outputs. They are labeled: comparison_report.txt and lq_summary.txt
